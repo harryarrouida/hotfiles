@@ -1,0 +1,103 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    border-colour: var(selected);
+    background-colour: var(background);
+    foreground-colour: var(foreground);
+    alternate-background: var(selected);
+    alternate-foreground: var(background);
+
+    font: "Hack Nerd Font 10";
+}
+
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+    icon-theme: "Papirus";
+    hide-scrollbar: true;
+    bw: 0;
+    fullscreen: false;
+    terminal: "kitty";
+    cycle: true;
+}
+
+window {
+    background-color: @background;
+    border-radius: 10px;
+    border: 1px;
+    width: 80%;
+    height: 80%;
+    enabled: true;
+}
+
+mainbox {
+    children: [ "inputbar", "listview" ];
+    spacing: 20px;
+    padding: 20px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 5px;
+    padding: 5px;
+    children: [ "prompt", "entry" ];
+    enabled: true;
+}
+
+prompt {
+    enabled: true;
+    padding: 5px;
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: @background-alt;
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: @foreground;
+    expand: true;
+    padding: 5px;
+    enabled: true;
+}
+
+listview {
+    background-color: @background;
+    columns: 4;
+    spacing: 20px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    enabled: true;
+}
+
+element {
+    background-color: @background;
+    text-color: @foreground;
+    orientation: vertical;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+element-icon {
+    size: 256px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+element-text {
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+}
+
+element selected {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border: 1px;
+    border-color: @foreground;
+}

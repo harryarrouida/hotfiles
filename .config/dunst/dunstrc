@@ -1,0 +1,20 @@
+[global]
+    font = Monospace 10
+    frame_width = 2
+    separator_height = 2
+    separator_color = "#7c6675"
+
+[urgency_low]
+    background = "#292427"
+    foreground = "#c9c8c9"
+    frame_color = "#c9c8c9"
+
+[urgency_normal]
+    background = "#292427"
+    foreground = "#c9c8c9"
+    frame_color = "#809BC9"
+
+[urgency_critical]
+    background = "#F99B8E"
+    foreground = "#292427"
+    frame_color = "#F99B8E"

@@ -1,0 +1,158 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    border: none;
+    font-family: 'Hack Nerd Font';
+    font-size: 15px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @background;
+    margin: 5px;
+}
+
+.module {
+    padding: 2px 8px;
+    margin: 3px;
+    /* border-radius: 8px; */
+}
+
+/* --- Compact Module Styling --- */
+#workspaces,
+#cpu,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#backlight,
+#custom-shutdown,
+#temperature,
+#disk,
+#custom-pacman, #custom-power-profile, #custom-arch {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    padding: 0px 6px; /* Reduced horizontal padding */
+    margin: 3px 2px;
+    /* border-radius: 8px; */
+    color: @forground;
+    border-bottom: 2px solid @color1;
+}
+
+#custom-power-profile {
+    padding: 3px 12px;
+    margin: 3px 1px;
+    font-size: 16px;
+}
+
+#custom-arch {
+    padding: 2px 8px;
+    margin: 3px 2px;
+    font-size: 18px;
+    min-width: 20px;
+}
+/* --- Left Modules --- */
+.modules-left {
+    margin-left: 6px;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 2px 4px; /* Reduced padding */
+    background-color: transparent;
+    color: @color1;
+    transition: none;
+}
+
+#workspaces:hover {
+    color: @forground;
+}
+
+#workspaces button.active {
+    color: @forground;
+}
+
+#cpu {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+#memory {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+/* --- Center Module --- */
+#clock {
+    padding: 2px 8px;
+    color: @forground;
+}
+
+/* --- Right Modules --- */
+.modules-right {
+    margin-right: 6px;
+}
+
+#backlight {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+#bluetooth {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+#bluetooth.off {
+    color: #6C7086;
+}
+
+#pulseaudio {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+#pulseaudio.muted {
+    color: #F38BA8;
+}
+
+#network {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+#network.disconnected {
+    color: #F38BA8;
+}
+
+#battery {
+    color: @forground;
+    padding: 0px 6px;
+}
+
+#battery.warning:not(.charging) {
+    color: #F9E2AF;
+}
+
+#battery.critical:not(.charging) {
+    color: #F38BA8;
+}
+
+#battery.charging {
+    color: #89B4FA;
+}
+
+#custom-shutdown {
+    padding: 2px 12px;
+    }
+
+#window {
+    margin-left: 8px;
+    font-size: 10px;
+    color: @forground;
+}

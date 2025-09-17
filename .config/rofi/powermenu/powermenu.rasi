@@ -1,0 +1,111 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    border-colour: var(selected);
+    background-colour: var(background);
+    foreground-colour: var(foreground);
+    alternate-background: var(selected);
+    alternate-foreground: var(background);
+
+    font: "Hack Nerd Font 12";
+}
+
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: "Apps";
+    drun-display-format: "{name}";
+    icon-theme: "Papirus";
+    
+    hide-scrollbar: true;
+    bw: 0;
+    fullscreen: false;
+    terminal: "kitty";
+    cycle: true;
+    line-margin: 2;
+    line-padding: 2;
+    fixed-num-lines: true;
+}
+
+window {
+    background-color: @background;
+    border-radius: 10px;
+    border: 1px;
+    width: 40%;
+    height: 50%;
+    x-offset: -50%;
+    y-offset: -50%;
+    enabled: true;
+    margin: 0px;
+    padding: 0px;
+}
+
+mainbox {
+    children: [ "inputbar", "listview" ];
+    spacing: 10px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 5px;
+    padding: 5px;
+    children: [ "prompt", "entry" ];
+    enabled: true;
+}
+
+prompt {
+    enabled: true;
+    padding: 5px;
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: @background-alt;
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: @foreground;
+    expand: true;
+    padding: 5px;
+    enabled: true;
+}
+
+listview {
+    background-color: @background;
+    columns: 1;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    enabled: true;
+    padding: 0px;
+}
+
+element {
+    background-color: @background;
+    text-color: @foreground;
+    orientation: horizontal;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    margin: 0 10px;
+}
+
+element selected {
+    background-color: transparent;
+    text-color: @foreground;
+    border: 0px 0px 0px 0px;
+    border-color: @foreground;
+}
