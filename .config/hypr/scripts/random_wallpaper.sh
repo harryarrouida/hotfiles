@@ -10,15 +10,18 @@ fi
 
 if [ -n "$WALLPAPER" ]; then
     wal -i "$WALLPAPER"
-    ~/.config/hypr/scripts/generate_hypr_colors.sh &
-    ~/.config/hypr/scripts/generate_dunst_colors.sh &
+    # generate colors
+    ~/.config/hypr/scripts/generate_hypr_colors.sh
+    # wallpaper setup
     hyprctl hyprpaper preload "$WALLPAPER"
     hyprctl hyprpaper wallpaper ",$WALLPAPER"
+
+    # other scripts
+    ~/.config/hypr/scripts/hyprlock_wallpaper_link.sh
+
+    # reload apps
     hyprctl reload
-    killall waybar && waybar &
+    killall waybar; waybar &
     killall rofi
     kitty @ set-colors -a -c ~/.cache/wal/colors-kitty.conf
-    # eww reload
-    eww reload
-    ~/.config/hypr/scripts/hyprlock_wallpaper_link.sh
 fi
