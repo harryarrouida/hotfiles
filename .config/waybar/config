@@ -3,7 +3,7 @@
     "position": "top",
     "height": 44,
     "modules-left": ["custom/arch", "hyprland/workspaces","custom/pacman",  "group/system-info", "custom/power-profile", "hyprland/window"],
-    "modules-center": ["clock#time"],
+    "modules-center": ["clock#time", "custom/music"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],
 
     "group/system-info": {
@@ -15,6 +15,11 @@
         "format": "󰋊 {free}",
         "path": "/"
     },
+"custom/music": {
+    "format": "",                // Unicode music icon (FontAwesome)
+    "on-click": "~/.config/hypr/scripts/toggle_music.sh"
+}
+,
 
     "custom/power-profile": {
         "exec": "~/.config/hypr/scripts/power-profile.sh",
@@ -25,7 +30,7 @@
         "tooltip-format": "Power Profile\nClick to cycle"
     },
     "custom/arch": {
-         "format": "󰣇", 
+         "format": "󰣇",
         "tooltip": false,
         "on-click": "rofi -show drun"
     },
