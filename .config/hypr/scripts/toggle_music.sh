@@ -6,7 +6,7 @@ if [ -f "$PIDFILE" ]; then
     pkill cava
     rm "$PIDFILE"
 else
-    mpv --no-video ~/Music/HollowKnight --playlist=<(find ~/Music/HollowKnight -type f | sort) &
+    mpv --no-video --really-quiet --loop=inf --shuffle ~/Music/HollowKnight --playlist=<(find ~/Music/HollowKnight -type f | sort) &
     echo $! > "$PIDFILE"
     cava &
 fi
