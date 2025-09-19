@@ -1,0 +1,25 @@
+
+[Default Applications]
+audio/mpegurl=org.kde.haruna.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+video/mp4=org.kde.haruna.desktop
+video/x-matroska=org.kde.haruna.desktop
+video/webm=org.kde.haruna.desktop
+image/jpeg=imv.desktop
+image/png=imv.desktop
+image/gif=imv.desktop
+video/avi=org.kde.haruna.desktop
+video/quicktime=org.kde.haruna.desktop
+video/x-msvideo=org.kde.haruna.desktop
+image/svg+xml=imv.desktop
+image/tiff=imv.desktop
+image/bmp=imv.desktop
+image/webp=imv.desktop
+audio/mpeg=org.kde.haruna.desktop
+audio/ogg=org.kde.haruna.desktop
+audio/flac=org.kde.haruna.desktop
+application/pdf=firefox.desktop

@@ -1,20 +1,64 @@
 [global]
-    font = Monospace 10
-    frame_width = 2
+    # Display
+    monitor = 0
+    follow = mouse
+
+    # Geometry - updated syntax
+    width = (200, 400)
+    height = (0, 300)
+    origin = top-right
+    offset = (10, 50)
+
+    # Progress bar
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 5
+
+    # Styling
+    transparency = 5
     separator_height = 2
-    separator_color = "#7c6675"
+    padding = 15
+    horizontal_padding = 15
+    text_icon_padding = 15
+    frame_width = 2
+    corner_radius = 10
+
+    # Icons
+    icon_corner_radius = 5
+    min_icon_size = 32
+    max_icon_size = 64
+
+    # Text
+    font = Hack Nerd Font 11
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+
+    # Interaction
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
 
 [urgency_low]
-    background = "#292427"
-    foreground = "#c9c8c9"
-    frame_color = "#c9c8c9"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#585b70"
+    timeout = 4
 
 [urgency_normal]
-    background = "#292427"
-    foreground = "#c9c8c9"
-    frame_color = "#809BC9"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#89b4fa"
+    timeout = 6
 
 [urgency_critical]
-    background = "#F99B8E"
-    foreground = "#292427"
-    frame_color = "#F99B8E"
+    background = "#f38ba8"
+    foreground = "#1e1e2e"
+    frame_color = "#f38ba8"
+    timeout = 0
